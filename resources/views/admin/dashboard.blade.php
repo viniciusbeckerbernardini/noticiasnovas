@@ -1,5 +1,5 @@
-@include('admin.template.navbar')
 @include('admin.template.header')
+@include('admin.template.navbar')
     <!-- Content Wrapper. Contains page content -->
 
         <!-- Content Header (Page header) -->

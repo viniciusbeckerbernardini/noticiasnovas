@@ -1,5 +1,5 @@
-@include('admin.template.navbar')
 @include('admin.template.header')
+@include('admin.template.navbar')
     <!-- Content Wrapper. Contains page content -->
         <!-- Content Header (Page header) -->
         @include('admin.template.breadcumb')
@@ -53,8 +53,8 @@
                                         </div>
                                         <div class="form-group">
                                             <div class="form-check">
-                                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                                <label class="form-check-label" for="exampleCheck1">Salvar como rascunho</label>
+                                                <input type="checkbox" class="form-check-input" id="exampleCheck12">
+                                                <label class="form-check-label" for="exampleCheck12">Salvar como rascunho</label>
                                             </div>
                                     </div>
                                     <!-- /.card-body -->
@@ -80,16 +80,16 @@
                                 <!-- form start -->
                                     <div class="card-body">
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Esportes</label>
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck13">
+                                            <label class="form-check-label" for="exampleCheck13">Esportes</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Porto Alegre</label>
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck14">
+                                            <label class="form-check-label" for="exampleCheck14">Porto Alegre</label>
                                         </div>
                                         <div class="form-check">
-                                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                            <label class="form-check-label" for="exampleCheck1">Jardim Algarve</label>
+                                            <input type="checkbox" class="form-check-input" id="exampleCheck15">
+                                            <label class="form-check-label" for="exampleCheck15">Jardim Algarve</label>
                                         </div>
                                     </div>
                                     <!-- /.card-body -->

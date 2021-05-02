@@ -1,5 +1,6 @@
 <?php
 namespace App\Http\Controllers;
+use App\Services\PostService;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use Illuminate\Support\Facades\DB;
@@ -7,11 +8,11 @@ use Illuminate\Support\Facades\URL;
 
 class PostController extends Controller
 {
-    private $post;
+    private $postService;
 
-    public function __construct()
+    public function __construct(PostService $postService)
     {
-        $this->post = new Post();
+        $this->postService = $postService;
     }
 
     /**
@@ -21,6 +22,7 @@ class PostController extends Controller
      */
     public function index()
     {
+        return view ('admin.post.index');
     }
 
     /**
@@ -30,6 +32,7 @@ class PostController extends Controller
      */
     public function create()
     {
+        return view('admin.post.create');
     }
 
     /**
@@ -40,44 +43,47 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        if($request->hasFile('background_image')){
+        if($request->hasFile('background_image'))
+        {
+
             // Getting the image from the client request
             $postBackgroundImage = $request->file('background_image');
+
             // Retrieving the original image name
             $name = $postBackgroundImage->getClientOriginalName();
+
             // Defining the folders who the images is going to be sended
-            $path = date('Y/m/d')."/images";
+            $path = "uploads".DIRECTORY_SEPARATOR.date('Y/m/d').DIRECTORY_SEPARATOR."images";
             $destination = public_path($path);
+
             // Verifiyng if this image name already existed in the folder and renaming the image if this happens
-            if(file_exists(public_path(`/images/$name}`))){
+            if(file_exists(public_path($path.DIRECTORY_SEPARATOR.$name))){
                 $name = time().'-'.$postBackgroundImage->getClientOriginalName();
             }
+
             // Triyng to move the image
             if($postBackgroundImage->move($destination, $name)){
+
                 // Retriving the values
                 $data = $request->all();
                 $data['author'] = 1;
                 $data['background_image'] = "$destination/$name";
-                DB::beginTransaction();
+
                 try {
-                    if($this->post->create($data)){
+                    $createPost = $this->postService->create($data);
+                    if($createPost){
                         var_dump("show. com imnagem");
-                        DB::commit();
-                    }else{
-                        var_dump("owws");
                     }
                 }catch (\Exception $e){
                     var_dump($data);
                     var_dump('Deu ruim');
                     var_dump($e->getMessage());
-                    DB::rollBack();
                 }
             }
         }else{
             $data = $request->all();
-            var_dump($data);
             $data['author'] = 1;
-            DB::beginTransaction();
+
             try {
                 if($this->post->create($data)){
                     var_dump("show, mas caí no else, sem imagem");

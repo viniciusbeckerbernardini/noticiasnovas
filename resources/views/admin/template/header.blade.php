@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE HTML>
+<html lang="pt-br">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,25 +11,23 @@
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Tempusdominus Bbootstrap 4 -->
-    <link rel="stylesheet" href="{{asset("AdminLTE-plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")}}">
+    <link rel="stylesheet" href="{{asset("/AdminLTE-plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css")}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="{{asset("AdminLTE-plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
+    <link rel="stylesheet" href="{{asset("/AdminLTE-plugins/icheck-bootstrap/icheck-bootstrap.min.css")}}">
     <!-- JQVMap -->
-    <link rel="stylesheet" href="{{asset("AdminLTE-plugins/jqvmap/jqvmap.min.css")}}">
+    <link rel="stylesheet" href="{{asset("/AdminLTE-plugins/jqvmap/jqvmap.min.css")}}">
     <!-- Theme style -->
-    <link rel="stylesheet" href="{{asset("dist/css/adminlte.min.css")}}">
+    <link rel="stylesheet" href="{{asset("/dist/css/adminlte.min.css")}}">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="{{asset("AdminLTE-plugins/overlayScrollbars/css/OverlayScrollbars.min.css")}}">
+    <link rel="stylesheet" href="{{asset("/AdminLTE-plugins/overlayScrollbars/css/OverlayScrollbars.min.css")}}">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href="{{asset("AdminLTE-plugins/daterangepicker/daterangepicker.css")}}">
+    <link rel="stylesheet" href="{{asset("/AdminLTE-plugins/daterangepicker/daterangepicker.css")}}">
     <!-- summernote -->
-    <link rel="stylesheet" href="{{asset("AdminLTE-plugins/summernote/summernote-bs4.css")}}">
-    <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="{{asset("/AdminLTE-plugins/summernote/summernote-bs4.css")}}">
     <!-- Tiny MCE -->
     <script src="https://cdn.tiny.cloud/1/zp1on9m5ugdkirnglhwxto16kkovw36cjz6igx4gddq0nlr1/tinymce/5/tinymce.min.js"></script>
-    <script src="{{asset("tinymce/index.js")}}"></script>
+    <script src="{{asset("/tinymce/index.js")}}"></script>
+    <!-- Google Font: Source Sans Pro -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
-    <div class="wrapper">
-        <div class="content-wrapper">
